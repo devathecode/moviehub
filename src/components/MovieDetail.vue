@@ -46,19 +46,19 @@ onMounted(() => {
         <div class="flex mt-3" v-if="genreArr">
           <b>Genre:</b>
           <div class="ms-2 flex flex-wrap space-x-2" v-for="item in genreArr" :key="item">
-            <div class="h-6 rounded-md bg-yellow-600 px-2 text-white me-2">{{ item }}</div>
+            <div class="rounded-md bg-yellow-600 px-2 text-white me-2">{{ item }}</div>
           </div>
         </div>
 
         <div class="flex mt-3" v-if="actorsArr">
           <b>Actors:</b>
           <div class="ms-2 flex flex-wrap space-x-2" v-for="item in actorsArr" :key="item">
-            <div class="h-6 rounded-md bg-yellow-600 px-2 text-white me-2">{{ item }}</div>
+            <div class="rounded-md bg-yellow-600 px-2 text-white me-2">{{ item }}</div>
           </div>
         </div>
         <p class="mt-3"><b>Director:</b> {{ movie.Director }}</p>
-        <div class="mt-3 flex">
-          <h2 class="me-2">Ratings:</h2>
+        <div class="mt-3 flex justify-center">
+          <b class="me-2">Ratings:</b>
           <p class="me-2"><b>IMDB:</b> {{ movie.imdbRating }}/10</p>
           <p><b>Metacritic:</b> {{ movie.Metascore }}/100</p>
         </div>
@@ -78,6 +78,10 @@ onMounted(() => {
 $color_1: rgb(255 255 255);
 $background-color_1: rgb(0 0 0 / 0.6);
 $background-color_2: rgb(202 138 4);
+
+.justify-center {
+  align-items: center;
+}
 
 .pt-5 {
   padding-top: 5rem;
