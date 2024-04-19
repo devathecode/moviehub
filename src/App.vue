@@ -1,9 +1,4 @@
 <template>
-  <header>
-    <router-link to="/">
-      <h1><span>Dev</span>Flix</h1>
-    </router-link>
-  </header>
   <main>
     <router-view />
   </main>
@@ -22,28 +17,28 @@
 }
 
 body {
-  background-color: #35495E;
+  background-color: black;
 }
 
 a {
   text-decoration: none;
 }
 
-header {
+// Utilities
+
+.flex {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 16px;
-  background-color: black;
-  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+}
 
-  h1 {
-    color: #FFF;
-    font-size: 28px;
+.flex-col {
+  flex-direction: column;
+}
 
-    span {
-      color: #ecd23a;
-    }
-  }
+.text-center {
+  text-align: center;
+}
+
+.grid {
+  display: grid;
 }
 </style>
