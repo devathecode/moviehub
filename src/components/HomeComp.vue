@@ -1,4 +1,3 @@
-
 <script setup>
 import { onMounted, ref } from 'vue';
 import LoaderComp from "./LoaderComp.vue"
@@ -11,7 +10,7 @@ const searchKeyArr = ['train', 'harry', 'man', 'evil', 'master']
 
 onMounted(() => {
   showLoader.value = true;
-  fetch(`http://www.omdbapi.com/?apikey=8c8a07b&s=${searchKeyArr[(Math.floor(Math.random() * searchKeyArr.length))]}`)
+  fetch(`https://www.omdbapi.com/?apikey=8c8a07b&s=${searchKeyArr[(Math.floor(Math.random() * searchKeyArr.length))]}`)
     .then(response => response.json())
     .then(data => {
       movies.value = data.Search;
@@ -24,7 +23,7 @@ const reff = ref();
 const SearchMovies = () => {
   showLoader.value = true;
   if (search.value != "") {
-    fetch(`http://www.omdbapi.com/?apikey=8c8a07b&s=${search.value}`)
+    fetch(`https://www.omdbapi.com/?apikey=8c8a07b&s=${search.value}`)
       .then(response => response.json())
       .then(data => {
         movies.value = data.Search;

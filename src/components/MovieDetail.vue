@@ -11,7 +11,7 @@ const actorsArr = ref([]);
 showLoader.value = true;
 onMounted(() => {
   showLoader.value = true;
-  fetch(`http://www.omdbapi.com/?apikey=8c8a07b&i=${route.params.id
+  fetch(`https://www.omdbapi.com/?apikey=8c8a07b&i=${route.params.id
     } & plot=full`)
     .then(response => response.json())
     .then(data => {
